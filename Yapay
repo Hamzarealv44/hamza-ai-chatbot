@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hamza AI</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+    #chat {
+      width: 90%;
+      max-width: 500px;
+      height: 400px;
+      background: #1e293b;
+      padding: 10px;
+      overflow-y: auto;
+      border-radius: 10px;
+    }
+    input {
+      width: 70%;
+      padding: 10px;
+    }
+    button {
+      padding: 10px;
+    }
+    .user { color: #38bdf8; }
+    .ai { color: #34d399; }
+  </style>
+</head>
+<body>
+
+<h2>🤖 Hamza AI</h2>
+
+<div id="chat"></div>
+
+<input id="text" placeholder="Bir şey yaz..." />
+<button onclick="send()">Gönder</button>
+
+<script>
+function addMessage(text, className) {
+  let div = document.createElement("div");
+  div
